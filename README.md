@@ -1,6 +1,8 @@
 # Module 16 - Big Data Challenge
 In this challenge, we are required to perform ETL process on a US review dataset ([Video Games Review dataset](https://s3.amazonaws.com/amazon-reviews-pds/tsv/amazon_reviews_us_Video_Games_v1_00.tsv.gz)) in the cloud and upload the DataFrames to RDS instances. We are also required to perform a statistical analysis on the “vine” reviews.
 # ETL Process
+## Link to analysis
+[ETL Google Colab notebook](https://drive.google.com/file/d/1mT-zNKTBYXsclFafV-VxxMT9OGdiyMJ4/view)
 ## Extract
 -	Extract the dataset from S3 bucket and load into dataframe using pyspark and display the head of dataframe
 
@@ -42,7 +44,6 @@ We conducted an analysis on the trustworthiness of “vine” reviews by
 -	From the table we ran [SQL queries](https://github.com/Thinguyen23/Thi_Module16_Bigdata/blob/master/thi_challenge.sql) to get the metrics below:
  ![analysis.png](https://github.com/Thinguyen23/Thi_Module16_Bigdata/blob/master/images/analysis.png)
 
-From the comparison table, we are confident to conclude that the vine(paid) reviews are unbiased and trustworthy.
+As shown in the table, the percentage of 5-star reviews for paid reviews are relatively low as compared to unpaid reviews (37.46% vs. 57.55%). Average rating and average number of helpful votes per reviews are similar across the two review types. Thus we are confident to conclude that the vine(paid) reviews are unbiased and trustworthy.
 
-# Link to analysis
-[ETL Google Colab notebook](https://drive.google.com/file/d/1mT-zNKTBYXsclFafV-VxxMT9OGdiyMJ4/view)
+
