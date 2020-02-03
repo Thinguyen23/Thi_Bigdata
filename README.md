@@ -41,7 +41,7 @@ Datatypes are prior altered to match tables schema data types
 # Analysis
 We conducted an analysis on the trustworthiness of “vine” reviews by
 -	Creating new tables for vine(paid) reviews and nonvine(unpaid) reviews
--	From the table we ran [SQL queries](https://github.com/Thinguyen23/Thi_Module16_Bigdata/blob/master/thi_challenge.sql) to get the metrics below:
+-	From the table, we run [SQL queries](https://github.com/Thinguyen23/Thi_Module16_Bigdata/blob/master/thi_challenge.sql) to get the metrics below:
  ![analysis.png](https://github.com/Thinguyen23/Thi_Module16_Bigdata/blob/master/images/analysis.png)
 
 As shown in the table, the percentage of 5-star reviews for paid reviews are relatively low as compared to unpaid reviews (37.46% vs. 57.55%). Average rating and average number of helpful votes per reviews are similar across the two review types. Thus we are confident to conclude that the vine(paid) reviews are unbiased and trustworthy.
