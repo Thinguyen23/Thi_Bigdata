@@ -137,8 +137,8 @@ vine_df.write.jdbc(url=jdbc_url, table='vine_table', mode=mode, properties=confi
 We conducted an analysis on the trustworthiness of “vine” reviews by
 -	Creating new tables for vine(paid) reviews and nonvine(unpaid) reviews
 -	From the table, we run [SQL queries](https://github.com/Thinguyen23/Thi_Module16_Bigdata/blob/master/thi_challenge.sql) to get the metrics below:
-<p>
-  <img src="https://github.com/Thinguyen23/Thi_Module16_Bigdata/blob/master/images/analysis.png" width="60%">
+<p align="center">
+  <img src="https://github.com/Thinguyen23/Thi_Module16_Bigdata/blob/master/images/analysis.png" width="75%">
 </p>
 As shown in the table, the percentage of 5-star reviews for paid reviews are relatively low as compared to unpaid reviews (37.46% vs. 57.55%). Average rating and average number of helpful votes per reviews are similar across the two review types. Thus we are confident to conclude that the vine(paid) reviews are unbiased and trustworthy.
 
