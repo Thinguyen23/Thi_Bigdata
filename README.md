@@ -95,6 +95,8 @@ schema = [StructField("marketplace", StringType(), True),
 # Pass in our fields
 review_schema = StructType(fields=schema)
 ```
+
+The data is then cleaned and saved into 4 tables:
 <ol>
   <li>review_id_table table</li>
   <li>products table</li>
@@ -127,9 +129,10 @@ customers_df.write.jdbc(url=jdbc_url, table='customers', mode=mode, properties=c
 vine_df.write.jdbc(url=jdbc_url, table='vine_table', mode=mode, properties=config)
 ```
 -	SQL tables
-<p>
+<p align="center">
   <img src="https://github.com/Thinguyen23/Thi_Module16_Bigdata/blob/master/images/sql.png" width="60%">
 </p>
+
 ## Analysis
 We conducted an analysis on the trustworthiness of “vine” reviews by
 -	Creating new tables for vine(paid) reviews and nonvine(unpaid) reviews
