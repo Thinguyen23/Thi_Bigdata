@@ -33,8 +33,8 @@ Key concepts:
 - N-gram: a sequence of items from a given text
 - Text Similarity: a use case of NLP used to determine document or sentence similarity.
 ### NLP pipeline
-<p align="center>
-          <img src="https://github.com/Thinguyen23/Thi_Module16_Bigdata/blob/master/images/nlp_pipeline.png" width="60%">
+<p align="center">
+  <img src="https://github.com/Thinguyen23/Thi_Module16_Bigdata/blob/master/images/nlp_pipeline.png" width="60%">
 </p>
                                                                                                                         
 ## Cloud computing
@@ -96,24 +96,19 @@ schema = [StructField("marketplace", StringType(), True),
 # Pass in our fields
 review_schema = StructType(fields=schema)
 ```
-<ol align="center">
+<ol>
   <li>review_id_table table</li>
-      <p>
-        <img src="https://github.com/Thinguyen23/Thi_Module16_Bigdata/blob/master/images/review_id.png" width="60%">
-      </p>
   <li>products table</li>
-      <p>
-        <img src="https://github.com/Thinguyen23/Thi_Module16_Bigdata/blob/master/images/products.png" width="60%">
-      </p>
   <li>customers table</li>
-      <p>
-        <img src="https://github.com/Thinguyen23/Thi_Module16_Bigdata/blob/master/images/customers.png" width="60%">
-      </p>
   <li>vine_table table</li>
-      <p>
-        <img src="https://github.com/Thinguyen23/Thi_Module16_Bigdata/blob/master/images/vine_table.png" width="60%">
-      </p>
 </ol>
+<p align="center">
+  <img src="https://github.com/Thinguyen23/Thi_Module16_Bigdata/blob/master/images/review_id.png" width="60%">
+  <img src="https://github.com/Thinguyen23/Thi_Module16_Bigdata/blob/master/images/products.png" width="20%">
+  <img src="https://github.com/Thinguyen23/Thi_Module16_Bigdata/blob/master/images/customers.png" width="20%">
+  <img src="https://github.com/Thinguyen23/Thi_Module16_Bigdata/blob/master/images/vine_table.png" width="20%">
+</p>
+
 ## Load the DataFrames that correspond to tables into an RDS instance
 -	Code:
 ```
@@ -132,7 +127,6 @@ customers_df.write.jdbc(url=jdbc_url, table='customers', mode=mode, properties=c
 # Write DataFrame to vine_table table in RDS
 vine_df.write.jdbc(url=jdbc_url, table='vine_table', mode=mode, properties=config)
 ```
-
 -	SQL tables
 <p>
   <img src="https://github.com/Thinguyen23/Thi_Module16_Bigdata/blob/master/images/sql.png" width="60%">
