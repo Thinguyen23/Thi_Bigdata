@@ -1,5 +1,9 @@
-# Module 16 - Big Data Challenge
-In this challenge, we are required to perform ETL process on a US review dataset ([Video Games Review dataset](https://s3.amazonaws.com/amazon-reviews-pds/tsv/amazon_reviews_us_Video_Games_v1_00.tsv.gz)) in the cloud and upload the DataFrames to RDS instances. We are also required to perform a statistical analysis on the “vine” reviews.
+# Big Data with AWS
+What exacltly constitutes big data? At what point does data become big? Is it just the size? A good rule of thumb to apply is: Data is considered big data when it exceeds the capacity of operational databases.
+
+Working with Big Data creates unique challenge including storage, accessability, back-up, etc.
+
+In this project, we work with US Video Grames Review Dataset from S3 bucket ([Video Games Review dataset](https://s3.amazonaws.com/amazon-reviews-pds/tsv/amazon_reviews_us_Video_Games_v1_00.tsv.gz)). The ETL (extract, transform, load) is performed in the cloud using GoogleColab and upload the DataFrames to RDS instances. We are also required to perform a statistical analysis on the “vine” reviews.
 # ETL Process
 ## Link to analysis
 [ETL Google Colab notebook](https://drive.google.com/file/d/1mT-zNKTBYXsclFafV-VxxMT9OGdiyMJ4/view)
@@ -8,9 +12,10 @@ In this challenge, we are required to perform ETL process on a US review dataset
 
 ![review_df.png](https://github.com/Thinguyen23/Thi_Module16_Bigdata/blob/master/images/review_df.png)
 
--	Count the number of records in the extracted dataset
-
-![review_size.png](https://github.com/Thinguyen23/Thi_Module16_Bigdata/blob/master/images/review_size.png)
+-	Count the number of records in the extracted dataset : `1,785,997` reviews
+<p>
+ <img src="https://github.com/Thinguyen23/Thi_Module16_Bigdata/blob/master/images/review_size.png" width="50%">
+</p>
 
 ## Transform the dataset to fit tables’ schemas
 Datatypes are prior altered to match tables schema data types
