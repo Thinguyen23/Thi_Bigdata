@@ -33,9 +33,13 @@ Key concepts:
 - N-gram: a sequence of items from a given text
 - Text Similarity: a use case of NLP used to determine document or sentence similarity.
 ### NLP pipeline
-<img src="https://github.com/Thinguyen23/Thi_Module16_Bigdata/blob/master/images/nlp_pipeline.png" width="60%">
+<p align="center>
+          <img src="https://github.com/Thinguyen23/Thi_Module16_Bigdata/blob/master/images/nlp_pipeline.png" width="60%">
+</p>
+                                                                                                                        
 ## Cloud computing
-“In the cloud” is an oft-repeated phrase these days, and nearly every technology used promises cloud access. What does it mean? It’s computing hosted on a shared virtual environment, interconnected to a massive storage facility with contained servers, storage, and different sites.
+'In the cloud' is an oft-repeated phrase these days, and nearly every technology used promises cloud access. What does it mean? It’s computing hosted on a shared virtual environment, interconnected to a massive storage facility with contained servers, storage, and different sites.
+
 There are many cloud provider in the market such as Amazon Web Services (AWS), Google, Microsoft...
 Cloud services, such as AWS, allow a company to scale easily. Before cloud services, you would need to buy and store your own servers, which is costly, time-consuming, and requires physical space. Cloud services allow the flexibility to adjust on the fly for budget and resources.
 
@@ -65,7 +69,7 @@ review_data_df.printSchema()
 ```
 -	Count the number of records in the extracted dataset : `1,785,997` reviews
 <p>
- <img src="https://github.com/Thinguyen23/Thi_Module16_Bigdata/blob/master/images/review_size.png" width="50%">
+ <img src="https://github.com/Thinguyen23/Thi_Module16_Bigdata/blob/master/images/review_size.png" width="40%">
 </p>
 
 ### Transform the dataset to fit tables’ schemas
@@ -92,16 +96,24 @@ schema = [StructField("marketplace", StringType(), True),
 # Pass in our fields
 review_schema = StructType(fields=schema)
 ```
-
--	review_id_table table
-<img src="https://github.com/Thinguyen23/Thi_Module16_Bigdata/blob/master/images/review_id.png" width="60%">
--	products table
-<img src="https://github.com/Thinguyen23/Thi_Module16_Bigdata/blob/master/images/products.png" width="60%">
--	customers table
-<img src="https://github.com/Thinguyen23/Thi_Module16_Bigdata/blob/master/images/customers.png" width="60%">
--	vine_table table
-<img src="https://github.com/Thinguyen23/Thi_Module16_Bigdata/blob/master/images/vine_table.png" width="60%">
-
+<ol align="center">
+  <li>review_id_table table</li>
+      <p>
+        <img src="https://github.com/Thinguyen23/Thi_Module16_Bigdata/blob/master/images/review_id.png" width="60%">
+      </p>
+  <li>products table</li>
+      <p>
+        <img src="https://github.com/Thinguyen23/Thi_Module16_Bigdata/blob/master/images/products.png" width="60%">
+      </p>
+  <li>customers table</li>
+      <p>
+        <img src="https://github.com/Thinguyen23/Thi_Module16_Bigdata/blob/master/images/customers.png" width="60%">
+      </p>
+  <li>vine_table table</li>
+      <p>
+        <img src="https://github.com/Thinguyen23/Thi_Module16_Bigdata/blob/master/images/vine_table.png" width="60%">
+      </p>
+</ol>
 ## Load the DataFrames that correspond to tables into an RDS instance
 -	Code:
 ```
@@ -122,14 +134,16 @@ vine_df.write.jdbc(url=jdbc_url, table='vine_table', mode=mode, properties=confi
 ```
 
 -	SQL tables
-<img src="https://github.com/Thinguyen23/Thi_Module16_Bigdata/blob/master/images/sql.png" width="60%">
-
+<p>
+  <img src="https://github.com/Thinguyen23/Thi_Module16_Bigdata/blob/master/images/sql.png" width="60%">
+</p>
 ## Analysis
 We conducted an analysis on the trustworthiness of “vine” reviews by
 -	Creating new tables for vine(paid) reviews and nonvine(unpaid) reviews
 -	From the table, we run [SQL queries](https://github.com/Thinguyen23/Thi_Module16_Bigdata/blob/master/thi_challenge.sql) to get the metrics below:
-<img src="https://github.com/Thinguyen23/Thi_Module16_Bigdata/blob/master/images/analysis.png" width="60%">
-
+<p>
+  <img src="https://github.com/Thinguyen23/Thi_Module16_Bigdata/blob/master/images/analysis.png" width="60%">
+</p>
 As shown in the table, the percentage of 5-star reviews for paid reviews are relatively low as compared to unpaid reviews (37.46% vs. 57.55%). Average rating and average number of helpful votes per reviews are similar across the two review types. Thus we are confident to conclude that the vine(paid) reviews are unbiased and trustworthy.
 
 
