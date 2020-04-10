@@ -33,7 +33,7 @@ Key concepts:
 - N-gram: a sequence of items from a given text
 - Text Similarity: a use case of NLP used to determine document or sentence similarity.
 ### NLP pipeline
-![nlp.png](https://github.com/Thinguyen23/Thi_Module16_Bigdata/blob/master/images/review_df.png)
+<img src="https://github.com/Thinguyen23/Thi_Module16_Bigdata/blob/master/images/nlp_pipeline.png" width="60%">
 ## Cloud computing
 “In the cloud” is an oft-repeated phrase these days, and nearly every technology used promises cloud access. What does it mean? It’s computing hosted on a shared virtual environment, interconnected to a massive storage facility with contained servers, storage, and different sites.
 There are many cloud provider in the market such as Amazon Web Services (AWS), Google, Microsoft...
@@ -68,7 +68,7 @@ review_data_df.printSchema()
  <img src="https://github.com/Thinguyen23/Thi_Module16_Bigdata/blob/master/images/review_size.png" width="50%">
 </p>
 
-## Transform the dataset to fit tables’ schemas
+### Transform the dataset to fit tables’ schemas
 - Datatypes are prior altered to match tables schema data types
 ```
 # Import struct fields that we can use
@@ -94,20 +94,13 @@ review_schema = StructType(fields=schema)
 ```
 
 -	review_id_table table
-
-![review_id.png](https://github.com/Thinguyen23/Thi_Module16_Bigdata/blob/master/images/review_id.png)
-
+<img src="https://github.com/Thinguyen23/Thi_Module16_Bigdata/blob/master/images/review_id.png" width="60%">
 -	products table
-
-
-![products.png](https://github.com/Thinguyen23/Thi_Module16_Bigdata/blob/master/images/products.png)
+<img src="https://github.com/Thinguyen23/Thi_Module16_Bigdata/blob/master/images/products.png" width="60%">
 -	customers table
-
-![customers.png](https://github.com/Thinguyen23/Thi_Module16_Bigdata/blob/master/images/customers.png)
+<img src="https://github.com/Thinguyen23/Thi_Module16_Bigdata/blob/master/images/customers.png" width="60%">
 -	vine_table table
-
-
-![vine_table.png](https://github.com/Thinguyen23/Thi_Module16_Bigdata/blob/master/images/vine_table.png)
+<img src="https://github.com/Thinguyen23/Thi_Module16_Bigdata/blob/master/images/vine_table.png" width="60%">
 
 ## Load the DataFrames that correspond to tables into an RDS instance
 -	Code:
@@ -129,13 +122,13 @@ vine_df.write.jdbc(url=jdbc_url, table='vine_table', mode=mode, properties=confi
 ```
 
 -	SQL tables
+<img src="https://github.com/Thinguyen23/Thi_Module16_Bigdata/blob/master/images/sql.png" width="60%">
 
-![sql.png](https://github.com/Thinguyen23/Thi_Module16_Bigdata/blob/master/images/sql.png)
-# Analysis
+## Analysis
 We conducted an analysis on the trustworthiness of “vine” reviews by
 -	Creating new tables for vine(paid) reviews and nonvine(unpaid) reviews
 -	From the table, we run [SQL queries](https://github.com/Thinguyen23/Thi_Module16_Bigdata/blob/master/thi_challenge.sql) to get the metrics below:
- ![analysis.png](https://github.com/Thinguyen23/Thi_Module16_Bigdata/blob/master/images/analysis.png)
+<img src="https://github.com/Thinguyen23/Thi_Module16_Bigdata/blob/master/images/analysis.png" width="60%">
 
 As shown in the table, the percentage of 5-star reviews for paid reviews are relatively low as compared to unpaid reviews (37.46% vs. 57.55%). Average rating and average number of helpful votes per reviews are similar across the two review types. Thus we are confident to conclude that the vine(paid) reviews are unbiased and trustworthy.
 
