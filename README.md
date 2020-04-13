@@ -45,7 +45,7 @@ Cloud services, such as AWS, allow a company to scale easily. Before cloud servi
 
 
 # Project
-# Big Data with AWS
+## Big Data with AWS
 In this project, we work with US Video Grames Review Dataset from S3 bucket on AWS ([Video Games Review dataset](https://s3.amazonaws.com/amazon-reviews-pds/tsv/amazon_reviews_us_Video_Games_v1_00.tsv.gz)). Many of Amazon's shoppers depend on product reviews to make a purchase. Amazon makes these datasets publicly available. However, they are quite large and can exceed the capacity of local machines to handle. One dataset alone contains more than 1.5 million rows. That is why I used Spark to work with the Video game dataset.
 
 The ETL (extract, transform, load) is performed in the cloud using GoogleColab and PySpark. The cleaned dataframe is then saved to RDS instance on AWS. With Postgresql, I also performed a statistical analysis on the “vine” (paid) reviews and "non-vine" reviews.
